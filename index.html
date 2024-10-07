@@ -351,6 +351,9 @@
 	<script>
 		let categoryLeft = document.getElementById('categoryLeft')
 		let categoryRight = document.getElementById('categoryRight')
+		let currentScroll = 1
+		cF1.style.marginLeft = '0px'
+		
 		function handleResize() {
 		    let cF1 = document.querySelector('.cF1')
 		    let cF2 = document.querySelector('.cF2')
@@ -364,8 +367,6 @@
 
 
 
-			let currentScroll = 1
-			cF1.style.marginLeft = '0px'
 
 		    if (window.matchMedia('(max-width: 1023px)').matches) {
 		    	cF1.style.display = ''
