@@ -70,6 +70,7 @@
 				<li><a href="/templates/Logo/page-1/index.html">Логотипы</a></li>
 				<li><a href="/templates/UX/page-1/index.html">Макеты сайтов</a></li>
 				<li><a href="/templates/BookDesign/page-1/index.html">Дизайн книги</a></li>
+				<li><a href="/templates/Autobiography/index.html">Автобиография</a></li>
 				<li><a href="/templates/Blog/page-1/index.html">Блог</a></li>
 				<li><a href="/templates/CONTACTS.html">Контакты</a></li>
 			</ul>
@@ -88,6 +89,7 @@
 			<a href="/templates/Logo/page-1/index.html">Логотипы</a>
 			<a href="/templates/UX/page-1/index.html">Макеты сайтов</a>
 			<a href="/templates/BookDesign/page-1/index.html">Дизайн книги</a>
+			<a href="/templates/Autobiography/index.html">Автобиография</a>
 			<a href="/templates/Blog/page-1/index.html">Блог</a>
 			<a href="/templates/CONTACTS.html">Контакты</a>
 		</div>
@@ -351,7 +353,6 @@
 	<script>
 		let categoryLeft = document.getElementById('categoryLeft')
 		let categoryRight = document.getElementById('categoryRight')
-		let currentScroll = 1
 		
 		let cF1 = document.querySelector('.cF1')
 		let cF2 = document.querySelector('.cF2')
@@ -363,19 +364,20 @@
 		let cF8 = document.querySelector('.cF8')
 		let cF9 = document.querySelector('.cF9')
 		
-		cF1.style.marginLeft = '0px'
-		cF1.style.display = ''
-		cF2.style.display = ''
-		cF3.style.display = ''
-		cF4.style.display = 'none'
-		cF5.style.display = 'none'
-		cF6.style.display = 'none'
-		cF7.style.display = 'none'
-		cF8.style.display = 'none'
-		cF9.style.display = 'none'
 		
 		function handleResize() {
 		    if (window.matchMedia('(max-width: 1023px)').matches) {
+				let currentScroll = 1
+				cF1.style.display = ''
+				cF2.style.display = ''
+				cF3.style.display = ''
+				cF4.style.display = 'none'
+				cF5.style.display = 'none'
+				cF6.style.display = 'none'
+				cF7.style.display = 'none'
+				cF8.style.display = 'none'
+				cF9.style.display = 'none'
+
 		    	categoryLeft.addEventListener('click', function() {
 		    		if (currentScroll === 1) {
 					}else if (currentScroll === 2){
@@ -432,6 +434,7 @@
 		    	});
 
 		    } else {
+				cF1.style.marginLeft = '0px'
 				categoryLeft.addEventListener('click', function() {
 		    		if (cF1.style.marginLeft === 'calc(-195% + 83px)') {
 						cF1.style.marginLeft = 'calc(-95% - 17px)'
@@ -451,6 +454,8 @@
 		}
 
 		handleResize();
+
+		window.addEventListener('resize', handleResize);
 	</script>
 </body>
 </html>
