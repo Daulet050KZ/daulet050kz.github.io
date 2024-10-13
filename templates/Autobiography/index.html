@@ -52,7 +52,16 @@
 			padding: 10px;
 			display: flex;
 			border-radius: 30px;
+			display: flex;
 		}
+
+		.biographies > img {
+			width: 285px;
+			height: 285px;
+			margin-right: 10px;
+			border-radius: 30px;
+		}
+
 	</style>
 </head>
 <body id="body">
@@ -113,7 +122,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="container">
+		<div class="container autobiography">
 			<section class="section__1">
 				<div style="width: 100%; height: auto; position: relative;">
 					<div class="timeline">
@@ -147,7 +156,7 @@
 					<h1 style="width: 100%; text-align: center; margin-top: 50px;">АВТОБИОГРАФИЯ</h1>
 
 					<div class="biographies content__block">
-						<img src="avatar.webp" alt="" style="width: 285px; height: 285px; margin-right: 10px; border-radius: 30px;">
+						<img src="avatar.webp" alt="">
 						<p>
 							<strong>Меня зовут Андрей, мне 23 года, и с 21 года я погрузился в мир графического дизайна.</strong>
 							<br>
@@ -281,41 +290,73 @@
 		startSequence(0);
 	</script>
 	<script>
-		for(let i = 1; i <= 5; i++){
-			document.getElementById('l202' + i).addEventListener('click', function() {
-				document.querySelectorAll('label').forEach(element => {
-					element.style.backgroundColor = '#bdbdbd';
-				});
-				document.getElementById('l202' + i).style.backgroundColor = '#ffbe41';
-				if (i === 1) {
-					document.querySelector('.timeline_block').querySelector('h1').innerText = '2021 г.'
-					document.querySelector('.timeline_block').querySelector('p').innerText = 'Знакомство с Photoshop: начало освоения графического дизайна. Первые заказы на фрилансе: начало практического применения навыков. Поступление в Политехнический университет по специальности «Информационные системы и технологии» в сфере бизнеса.'
-					document.querySelector('.timeline_block').style.left = '0%'
-					document.querySelector('.timeline_block').style.transform = 'translateX(0%)'
-				}else if (i === 2){
-					document.querySelector('.timeline_block').querySelector('h1').innerText = '2022 г.'
-					document.querySelector('.timeline_block').querySelector('p').innerText = 'Трудоустройство в Национальную библиотеку им. Осмонова на должности инженера: получение опыта работы в государственной структуре. Выполнение проектов по графическому дизайну для библиотеки: сочетание технических знаний с креативной деятельностью.'
-					document.querySelector('.timeline_block').style.left = '25%'
-					document.querySelector('.timeline_block').style.transform = 'translateX(0%)'
-				}else if (i === 3){
-					document.querySelector('.timeline_block').querySelector('h1').innerText = '2023 г.'
-					document.querySelector('.timeline_block').querySelector('p').innerText = 'Завершение обучения в университете: получение диплома. Трудоустройство в ОАО «Кыргызтелеком»: работа графическим дизайнером в отделе маркетинга, применение полученных знаний и навыков в крупной компании.'
-					document.querySelector('.timeline_block').style.left = '50%'
-					document.querySelector('.timeline_block').style.transform = 'translateX(-50%)'
-				}else if (i === 4){
-					document.querySelector('.timeline_block').querySelector('h1').innerText = '2024 г.'
-					document.querySelector('.timeline_block').querySelector('p').innerText = 'Прошел квалификацию на курсах школы OnyClick: углубление профессиональных знаний. Получение сертификата государственного уровня: подтверждение квалификации и профессионализма в области графического дизайна.'
-					document.querySelector('.timeline_block').style.left = '75%'
-					document.querySelector('.timeline_block').style.transform = 'translateX(-100%)'
-				}else if (i === 5){
-					document.querySelector('.timeline_block').querySelector('h1').innerText = '2025 г.'
-					document.querySelector('.timeline_block').querySelector('p').innerText = 'ПУСТО'
-					document.querySelector('.timeline_block').style.left = '100%'
-					document.querySelector('.timeline_block').style.transform = 'translateX(-100%)'
+		function handleResize() {
+		    if (window.matchMedia('(max-width: 1023px)').matches) {
+		    	for(let i = 1; i <= 5; i++){
+					document.getElementById('l202' + i).addEventListener('click', function() {
+						document.querySelectorAll('label').forEach(element => {
+							element.style.backgroundColor = '#bdbdbd';
+						});
+						document.getElementById('l202' + i).style.backgroundColor = '#ffbe41';
+						if (i === 1) {
+							document.querySelector('.timeline_block').querySelector('h1').innerText = '2021 г.'
+							document.querySelector('.timeline_block').querySelector('p').innerText = 'Знакомство с Photoshop: начало освоения графического дизайна. Первые заказы на фрилансе: начало практического применения навыков. Поступление в Политехнический университет по специальности «Информационные системы и технологии» в сфере бизнеса.'
+							// document.querySelector('.timeline_block').style.left = '0%'
+						}else if (i === 2){
+							document.querySelector('.timeline_block').querySelector('h1').innerText = '2022 г.'
+							document.querySelector('.timeline_block').querySelector('p').innerText = 'Трудоустройство в Национальную библиотеку им. Осмонова на должности инженера: получение опыта работы в государственной структуре. Выполнение проектов по графическому дизайну для библиотеки: сочетание технических знаний с креативной деятельностью.'
+						}else if (i === 3){
+							document.querySelector('.timeline_block').querySelector('h1').innerText = '2023 г.'
+							document.querySelector('.timeline_block').querySelector('p').innerText = 'Завершение обучения в университете: получение диплома. Трудоустройство в ОАО «Кыргызтелеком»: работа графическим дизайнером в отделе маркетинга, применение полученных знаний и навыков в крупной компании.'
+						}else if (i === 4){
+							document.querySelector('.timeline_block').querySelector('h1').innerText = '2024 г.'
+							document.querySelector('.timeline_block').querySelector('p').innerText = 'Прошел квалификацию на курсах школы OnyClick: углубление профессиональных знаний. Получение сертификата государственного уровня: подтверждение квалификации и профессионализма в области графического дизайна.'
+						}else if (i === 5){
+							document.querySelector('.timeline_block').querySelector('h1').innerText = '2025 г.'
+							document.querySelector('.timeline_block').querySelector('p').innerText = 'ПУСТО'
+						}
+					});
 				}
-			});
+		    }else{
+				for(let i = 1; i <= 5; i++){
+					document.getElementById('l202' + i).addEventListener('click', function() {
+						document.querySelectorAll('label').forEach(element => {
+							element.style.backgroundColor = '#bdbdbd';
+						});
+						document.getElementById('l202' + i).style.backgroundColor = '#ffbe41';
+						if (i === 1) {
+							document.querySelector('.timeline_block').querySelector('h1').innerText = '2021 г.'
+							document.querySelector('.timeline_block').querySelector('p').innerText = 'Знакомство с Photoshop: начало освоения графического дизайна. Первые заказы на фрилансе: начало практического применения навыков. Поступление в Политехнический университет по специальности «Информационные системы и технологии» в сфере бизнеса.'
+							document.querySelector('.timeline_block').style.left = '0%'
+							document.querySelector('.timeline_block').style.transform = 'translateX(0%)'
+						}else if (i === 2){
+							document.querySelector('.timeline_block').querySelector('h1').innerText = '2022 г.'
+							document.querySelector('.timeline_block').querySelector('p').innerText = 'Трудоустройство в Национальную библиотеку им. Осмонова на должности инженера: получение опыта работы в государственной структуре. Выполнение проектов по графическому дизайну для библиотеки: сочетание технических знаний с креативной деятельностью.'
+							document.querySelector('.timeline_block').style.left = '25%'
+							document.querySelector('.timeline_block').style.transform = 'translateX(0%)'
+						}else if (i === 3){
+							document.querySelector('.timeline_block').querySelector('h1').innerText = '2023 г.'
+							document.querySelector('.timeline_block').querySelector('p').innerText = 'Завершение обучения в университете: получение диплома. Трудоустройство в ОАО «Кыргызтелеком»: работа графическим дизайнером в отделе маркетинга, применение полученных знаний и навыков в крупной компании.'
+							document.querySelector('.timeline_block').style.left = '50%'
+							document.querySelector('.timeline_block').style.transform = 'translateX(-50%)'
+						}else if (i === 4){
+							document.querySelector('.timeline_block').querySelector('h1').innerText = '2024 г.'
+							document.querySelector('.timeline_block').querySelector('p').innerText = 'Прошел квалификацию на курсах школы OnyClick: углубление профессиональных знаний. Получение сертификата государственного уровня: подтверждение квалификации и профессионализма в области графического дизайна.'
+							document.querySelector('.timeline_block').style.left = '75%'
+							document.querySelector('.timeline_block').style.transform = 'translateX(-100%)'
+						}else if (i === 5){
+							document.querySelector('.timeline_block').querySelector('h1').innerText = '2025 г.'
+							document.querySelector('.timeline_block').querySelector('p').innerText = 'ПУСТО'
+							document.querySelector('.timeline_block').style.left = '100%'
+							document.querySelector('.timeline_block').style.transform = 'translateX(-100%)'
+						}
+					});
+				}
+		    }
 		}
+		handleResize();
 	</script>
+
 	<script>
 		const toggle_mode = document.getElementById('toggle-mode')
 

@@ -227,4 +227,15 @@
 	.email__form > button {
 		opacity: 1;
 	}
+	/* Autobiography */
+	.container.autobiography > .section__1 > div > .biographies {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	.container.autobiography > .section__1 > div > .biographies > img {
+		margin-right: 0px;
+		margin-bottom: 10px;
+	}
 }
