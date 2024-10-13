@@ -356,7 +356,7 @@
 				const diagramm_blender = document.querySelector('.section__diagramm.Blender').querySelector('.diagramm')
 
 				window.onscroll = function() {
-					if(300 < window.pageYOffset){
+					if(250 < window.pageYOffset){
 						header.style.backgroundColor = '#222222';
 					}else{
 						header.style.backgroundColor = '';
@@ -552,8 +552,6 @@
 		}
 
 		handleResize();
-
-		window.addEventListener('resize', handleResize);
 	</script>
 	<script src="/js/burger.js"></script>
 	<script src="/js/toggle-mode.js"></script>
@@ -594,6 +592,16 @@
 		let cF7 = document.querySelector('.cF7')
 		let cF8 = document.querySelector('.cF8')
 		let cF9 = document.querySelector('.cF9')
+		
+		cF1.style.marginLeft = '0'
+		cF2.style.marginLeft = '0'
+		cF3.style.marginLeft = '0'
+		cF4.style.marginLeft = '0'
+		cF5.style.marginLeft = '0'
+		cF6.style.marginLeft = '0'
+		cF7.style.marginLeft = '0'
+		cF8.style.marginLeft = '0'
+		cF9.style.marginLeft = '0'
 		
 		
 		function handleResize() {
