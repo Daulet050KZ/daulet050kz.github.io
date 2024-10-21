@@ -413,13 +413,10 @@
 		const fullScreen = document.querySelector('.fullScreen');
 		const fullScreenImage = document.getElementById('fullScreen__image');
 		const fullScreenBtnZoom = document.getElementById('fullScreenBtn__zoom');
-		const fullScreenBtnToLeft = document.getElementById('fullScreenBtn__ToLeft');
-		const fullScreenBtnToRight = document.getElementById('fullScreenBtn__ToRight');
 		const fullScreenBtnClose = document.getElementById('fullScreenBtn__close');
 		const fullScreen__bottom = document.querySelector('.fullScreen__bottom');
 
 		const fullScreenWindow = document.querySelector('.fullScreen__window');
-		const list__controleArrow = document.getElementById('list__controleArrow');
 		let zoom_block = document.getElementById('zoom_block');
 
 		let currentImageIndex;
@@ -521,25 +518,6 @@
 		function sizePic() {
 			size = document.getElementById("size").value;
 			fullScreenImage.style.width = 100 + 10*size + '%';
-		}
-
-		function ArrowToLeft(){
-			if(currentImageIndex === 1){
-				currentImageIndex = currentImageIndex;
-				fullScreenImage.src = 'item_' + currentImageIndex + '.webp';
-			}else{
-				currentImageIndex = currentImageIndex - 1;
-				fullScreenImage.src = 'item_' + currentImageIndex + '.webp';
-			}
-		}
-		function ArrowToRight(){
-			if(currentImageIndex === 9){
-				currentImageIndex = currentImageIndex;
-				fullScreenImage.src = 'item_' + currentImageIndex + '.webp';
-			}else{
-				currentImageIndex = currentImageIndex + 1;
-				fullScreenImage.src = 'item_' + currentImageIndex + '.webp';
-			}
 		}
 	</script>
 	<script src="/js/header.js"></script>

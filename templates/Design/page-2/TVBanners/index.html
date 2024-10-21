@@ -58,49 +58,52 @@
 <body id="body">
 	<header id="header">
 		<img src="/img/logo.png" alt="" width="103px" height="24px">
-		<a href="/templates/Design/page-1/index.html" style="color: #fff; margin: 10px 0; font-size: 22px; font-weight: 700;" id="back">
+		<a href="/templates/Design/page-2/index.html" style="color: #fff; margin: 10px 0; font-size: 22px; font-weight: 700;" id="back">
 			<i class="fa-solid fa-arrow-left" style="margin-right: 10px;"></i>Назад
 		</a>
 	</header>
 	<main id="main">
 		<div class="intro" style="height: 45vh">
 			<img src="banner.webp" alt="" style="width: 100%; height: 100%; position: absolute; z-index: -1;">
-			<h1>Пресс волл</h1>
+			<h1>ТВ Баннеры Кыргызтелеком</h1>
 		</div>
 		<div class="container">
 			<section class="section__1">
 				<section class="slider">
 					<i class="fa-solid fa-arrow-left" style="left: 0; margin-left: 10px;" onclick="leftBtn()"></i>
-					<img src="1.webp" alt="" id="slide-1">
-					<img src="2.webp" alt="" id="slide-2">
-					<img src="3.webp" alt="" id="slide-3">
+					<img src="slide1.webp" alt="" id="slide-1">
+					<img src="slide2.webp" alt="" id="slide-2">
+					<img src="slide3.webp" alt="" id="slide-3">
+					<img src="slide4.webp" alt="" id="slide-4">
 					<i class="fa-solid fa-arrow-right" style="right: 0; margin-right: 10px;" onclick="rightBtn()"></i>
 				</section>
 
 				<p>
-					<strong>Пресс-волы для мероприятий Кыргызтелекома</strong>
+					<strong>ТВ баннеры для услуг и тарифов Кыргызтелекома</strong>
 					<br>
 					<br>
-					Я разработал серию пресс-волов для различных мероприятий, организованных Кыргызтелекомом. 
-Основной задачей было создание универсального, но при этом визуально выразительного 
-дизайна, который мог бы легко адаптироваться под разные темы и форматы событий.
+					Для рекламных кампаний Кыргызтелекома я разработал серию ТВ баннеров, которые продвигали 
+различные услуги и тарифы компании. Основной задачей было создание визуально насыщенных и 
+динамичных баннеров, которые могли бы эффективно привлекать внимание зрителей.
 					<br>
 					<br>
-					Каждый пресс-вол был выполнен с использованием фирменных цветов и логотипов компании, 
-чтобы сохранить визуальную преемственность и узнаваемость бренда. Я использовал строгие и 
-элегантные графические решения, которые подчёркивали профессионализм и масштабность 
-мероприятий. Важным элементом стало грамотное размещение логотипов и ключевых 
-сообщений, чтобы они выглядели гармонично и не перегружали общую композицию.
+					В работе над ТВ баннерами я сосредоточился на том, чтобы передать основные преимущества 
+тарифов и услуг максимально доступно и лаконично. Каждый баннер был выполнен в фирменных 
+цветах компании, что усиливало брендированное восприятие зрителей. Я использовал 
+динамичные анимации и плавные переходы между текстом и графическими элементами, что 
+создавало эффект живости и современности.
 					<br>
 					<br>
-					Пресс-волы стали неотъемлемой частью оформления мероприятий, помогая создать 
-соответствующую атмосферу и поддержать визуальную идентичность бренда.
+					Информационные блоки были тщательно продуманы с точки зрения их расположения и 
+визуальной иерархии, чтобы зрители могли легко воспринять ключевые сообщения. В результате, 
+ТВ баннеры стали неотъемлемой частью рекламных кампаний, помогая увеличить 
+осведомленность о тарифах и услугах, а также повысить их популярность среди клиентов.
 				</p>
 				<img src="1.webp" alt="">
 				<img src="2.webp" alt="">
 				<img src="3.webp" alt="">
 				<img src="4.webp" alt="">
-				<img src="5.webp" alt="">
+				<!-- <img src="5.webp" alt=""> -->
 			</section>
 		</div>
 		<div class="fullScreen" style="display: none;">
@@ -145,8 +148,8 @@
 		}
 
 		function rightBtn(){
-			if(slideCount === 3){
-				slideCount = 3;
+			if(slideCount === 4){
+				slideCount = 4;
 			}else{
 				slideCount += 1
 			}
@@ -160,6 +163,8 @@
 				slide1.style.marginLeft = '-100%';
 			}else if(slideCount === 3){
 				slide1.style.marginLeft = '-200%';
+			}else if(slideCount === 4){
+				slide1.style.marginLeft = '-300%';
 			};
 		};
 
