@@ -82,7 +82,7 @@ header {
 	padding: 0px 100px;
 	height: 39px;
 	position: fixed;
-	z-index: 100;
+	z-index: 101;
 	transition: .3s;
 }
 

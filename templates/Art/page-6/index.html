@@ -37,40 +37,44 @@
 		<div id="nav-icon6">
 		    <span></span>
 		</div>
-		<div id="burger">
-			<a href="/index.html">Главная</a>
-			<a href="/templates/Art/page-1/index.html" style="color: #fff; border-bottom: 2px solid #ffbe41; opacity: 1;">Арты</a>
-			<a href="/templates/Drawings/page-1/index.html">Рисунки</a>
-			<a href="/templates/3D/page-1/index.html">3D Работы</a>
-			<a href="/templates/Design/page-1/index.html">Дизайн</a>
-			<a href="/templates/Lettering/page-1/index.html">Леттеринг</a>
-			<a href="/templates/Logo/page-1/index.html">Логотипы</a>
-			<a href="/templates/UX/page-1/index.html">Макеты сайтов</a>
-			<a href="/templates/BookDesign/page-1/index.html">Дизайн книги</a>
-			<a href="/templates/Autobiography/index.html">Автобиография</a>
-			<a href="/templates/Blog/page-1/index.html">Блог</a>
-			<a href="/templates/CONTACTS.html">Контакты</a>
-		</div>
 	</header>
+
+	<div id="burger">
+		<div>
+			<a href="/index.html"><span>•</span> Главная</a>
+			<h2 id="burger__portfolio-btn">Мое портолио <i class="fa-solid fa-caret-down" style="transition: .3s;"></i></h2>
+			<div id="burger__portfolio" style="height: 0%; display: none;">
+				<a id="bpi__1" href="/templates/Art/page-1/index.html"><span style="color: #ffbe41;">•</span> Арты</a>
+				<a id="bpi__2" href="/templates/Drawings/page-1/index.html"><span>•</span> Рисунки</a>
+				<a id="bpi__3" href="/templates/3D/page-1/index.html"><span>•</span> 3D Работы</a>
+				<a id="bpi__4" href="/templates/Design/page-1/index.html"><span>•</span> Дизайн</a>
+				<a id="bpi__5" href="/templates/Lettering/page-1/index.html"><span>•</span> Леттеринг</a>
+				<a id="bpi__6" href="/templates/Logo/page-1/index.html"><span>•</span> Логотипы</a>
+				<a id="bpi__7" href="/templates/UX/page-1/index.html"><span>•</span> Макеты сайтов</a>
+				<a id="bpi__8" href="/templates/BookDesign/page-1/index.html"><span>•</span> Дизайн книги</a>
+			</div>
+
+			<a href="/templates/Autobiography/index.html"><span>•</span> Автобиография</a>
+			<a href="/templates/Blog/page-1/index.html"><span>•</span> Блог</a>
+			<a href="/templates/CONTACTS.html"><span>•</span> Контакты</a>
+			
+		</div>
+		<footer id="footer">
+			<div class="contacts">
+				<i class="fa-brands fa-square-facebook" onclick="linkFacebook()"></i>
+				<i class="fa-brands fa-vk" onclick="linkVK()"></i>
+				<i class="fa-brands fa-square-behance" onclick="linkBehance()"></i>
+				<i class="fa-brands fa-square-instagram" onclick="linkInstagram()"></i>
+				<i class="fa-brands fa-artstation" onclick="linkDrive()"></i>
+			</div>
+		</footer>
+	</div>
+	
 	<main id="main">
 		<div class="intro">
-			<img src="../intro/1.webp" alt="" style="height: 100%; position: absolute; z-index: -1; width: 100%; object-fit: cover;">
+			<img src="/img/intro/banner1.jpg" alt="" style="height: 100%; position: absolute; z-index: -1; width: 100%; object-fit: cover;">
 			<h1>ART</h1>
 			<span>ПОДБОРКА ЦИФРОВЫХ АРТОВ</span>
-			<div id="intro-bar">
-				<div id="intro-1">
-					<div class="intro-progress"></div>
-				</div>
-				<div id="intro-2">
-					<div class="intro-progress"></div>
-				</div>
-				<div id="intro-3">
-					<div class="intro-progress"></div>
-				</div>
-				<div id="intro-4">
-					<div class="intro-progress"></div>
-				</div>
-			</div>
 		</div>
 		<div class="container">
 			<section class="section__1">
@@ -167,69 +171,6 @@
 	</footer>
 	<script src="/js/links.js"></script>
 
-	<script>
-		let intro = document.querySelector('.intro img');
-
-		const introBars = [
-		    document.getElementById('intro-1'),
-		    document.getElementById('intro-2'),
-		    document.getElementById('intro-3'),
-		    document.getElementById('intro-4')
-		];
-
-		let currentStep = 0;
-		const introImages = [
-		    '../intro/1.webp',
-		    '../intro/2.webp',
-		    '../intro/3.webp',
-		    '../intro/4.webp'
-		];
-
-		function startSequence(step) {
-		    clearTimeouts();
-
-		    resetProgress(() => {
-		        currentStep = step;
-		        updateProgress(currentStep);
-		        intro.src = introImages[currentStep];
-		        currentStep++;
-
-		        if (currentStep >= introBars.length) {
-		            currentStep = 0;
-		        }
-
-		        setTimeout(() => startSequence(currentStep), 3000);
-		    });
-		}
-
-		function updateProgress(step) {
-		    introBars[step].querySelector('.intro-progress').style.width = '100%';
-		}
-
-		function resetProgress(callback) {
-		    introBars.forEach(bar => {
-		        bar.querySelector('.intro-progress').style.width = '0%';
-		    });
-
-		    setTimeout(callback, 100);
-		}
-
-		function clearTimeouts() {
-		    let id = window.setTimeout(function() {}, 0);
-		    while (id--) {
-		        window.clearTimeout(id);
-		    }
-		}
-
-		introBars.forEach((bar, index) => {
-		    bar.addEventListener('click', () => {
-		        startSequence(index);
-		    });
-		});
-
-		startSequence(0);
-	</script>
-	
 	<script>
 		const header = document.getElementById('header');
 		const body = document.getElementById('body');
