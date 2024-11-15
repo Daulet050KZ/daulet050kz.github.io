@@ -463,23 +463,27 @@ footer > img {
 .CONTACT_ME {
 	box-shadow: 0px 2px 4px rgb(5, 5, 5, 20%);
 	height: auto;
-	width: 100%;
+	min-width: 350px;
 	max-width: 720px;
 	background-color: #fff;
+	margin: 16px;
 	padding: 10px;
 	border-radius: 10px;
 }
 
-.CONTACT_ME > div > i {
+.CONTACT_ME > div > h2 > i,
+.CONTACT_ME > div > a > i {
 	color: #222;
 	font-size: 30px;
 	font-weight: 700;
-	margin-right: 10px; 
 }
-.CONTACT_ME > div > a {
+.CONTACT_ME > div > a,
+.CONTACT_ME > div > h2 {
 	color: #444;
-	font-size: 22px;
+	font-size: 26px;
 	font-weight: 700;
+	margin: 5px 0;
+	cursor: pointer;
 }
 .CONTACT_ME > div > a:hover {
 	color: #ffbe41;
@@ -491,6 +495,7 @@ footer > img {
 	justify-content: center;
 	align-items: center;
 	width: 100%;
+	margin-top: 10px;
 }
 .email__form > div{
 	width: 100%;

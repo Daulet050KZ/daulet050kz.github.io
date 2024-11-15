@@ -115,7 +115,9 @@
 			<i class="fa-solid fa-xmark" id="fullScreenBtn__close"></i>
 
 			<div class="fullScreen__window">
+				<i class="fa-solid fa-arrow-left" id="fullScreenBtn__ToLeft" onclick="ArrowToLeft()"></i>
 				<img src="" alt="" id="fullScreen__image" style="object-fit: cover;">
+				<i class="fa-solid fa-arrow-right" id="fullScreenBtn__ToRight" onclick="ArrowToRight()"></i>
 			</div>
 
 			<div class="fullScreen__bottom">
@@ -189,16 +191,14 @@
 		const fullScreen = document.querySelector('.fullScreen');
 		const fullScreenImage = document.getElementById('fullScreen__image');
 		const fullScreenBtnZoom = document.getElementById('fullScreenBtn__zoom');
-		const fullScreenBtnToLeft = document.getElementById('fullScreenBtn__ToLeft');
-		const fullScreenBtnToRight = document.getElementById('fullScreenBtn__ToRight');
 		const fullScreenBtnClose = document.getElementById('fullScreenBtn__close');
 		const fullScreen__bottom = document.querySelector('.fullScreen__bottom');
 
 		const fullScreenWindow = document.querySelector('.fullScreen__window');
-		const list__controleArrow = document.getElementById('list__controleArrow');
 		let zoom_block = document.getElementById('zoom_block');
 
 		let currentImageIndex;
+		let lastImageIndex = 5;
 
 		document.querySelectorAll('.item').forEach((item, index) => {
 			item.addEventListener('click', () => {
@@ -206,7 +206,7 @@
 				header.style.display = 'none';
 				body.style.overflow = 'hidden';
 				fullScreen.style.display = '';
-				fullScreenImage.src = item.querySelector('img').src;
+				fullScreenImage.src = item.src;
 				document.documentElement.requestFullscreen();
 
 				fullScreenImage.style.width = 'auto';
@@ -215,6 +215,26 @@
 				fullScreenImage.style.maxHeight = '100%';
 			});
 		});
+
+		function ArrowToLeft(){
+		    if(currentImageIndex === 1){
+		        currentImageIndex = currentImageIndex;
+		        fullScreenImage.src = '' + currentImageIndex + '.webp';
+		    }else{
+		        currentImageIndex = currentImageIndex - 1;
+		        fullScreenImage.src = '' + currentImageIndex + '.webp';
+		    }
+		}
+
+		function ArrowToRight(){
+		    if(currentImageIndex === lastImageIndex){
+		        currentImageIndex = currentImageIndex;
+		        fullScreenImage.src = '' + currentImageIndex + '.webp';
+		    }else{
+		        currentImageIndex = currentImageIndex + 1;
+		        fullScreenImage.src = '' + currentImageIndex + '.webp';
+		    }
+		}
 
 		fullScreenBtnClose.addEventListener('click', function() {
 			fullScreenClose()
@@ -250,24 +270,7 @@
 			}
 		});
 
-		let listVisible = true;
 		let zoomBlockVisible = false;
-
-		list__controleArrow.addEventListener('click', function() {
-			if(listVisible){
-				list__controleArrow.querySelector('i').classList.add('fa-caret-up');
-				list__controleArrow.querySelector('i').classList.remove('fa-caret-down');
-				fullScreen__bottom.style.transform = 'translateY(80px)';
-				fullScreen__bottom.style.opacity = '30%';
-				listVisible = false;
-			}else{
-				list__controleArrow.querySelector('i').classList.add('fa-caret-down');
-				list__controleArrow.querySelector('i').classList.remove('fa-caret-up');
-				fullScreen__bottom.style.transform = 'translateY(0px)';
-				fullScreen__bottom.style.opacity = '100%';
-				listVisible = true;
-			}
-		});
 
 		function zoomBlock() {
 		    if (zoomBlockVisible === false) {
@@ -283,12 +286,10 @@
 		        fullScreenImage.style.height = '';
 		        fullScreenImage.style.maxWidth = '';
 		        fullScreenImage.style.maxHeight = '';
-
-		        fullScreenBtnToLeft.style.display = 'none'
-		        fullScreenBtnToRight.style.display = 'none'
 		    } else {
 		        zoomBlockVisible = false;
 
+		        document.getElementById('zoom_block').style.display = 'none';
 		        fullScreenImage.removeEventListener('mousedown', startDragging);
 		        document.removeEventListener('mousemove', dragElement);
 		        document.removeEventListener('mouseup', stopDragging);
@@ -298,15 +299,11 @@
 		        document.getElementById("size").value = '0'
 
 		        fullScreenImage.style.cursor = 'default';
-		        document.getElementById('zoom_block').style.display = 'none';
 
 		        fullScreenImage.style.width = 'auto';
 		        fullScreenImage.style.height = 'auto';
 		        fullScreenImage.style.maxWidth = '100%';
 		        fullScreenImage.style.maxHeight = '100%';
-
-		        fullScreenBtnToLeft.style.display = ''
-		        fullScreenBtnToRight.style.display = ''
 		    }
 		}
 

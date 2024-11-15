@@ -21,6 +21,56 @@
 			border-radius: 10px;
 			margin: 10px 0px;
 		}
+		.slider-container {
+			position: relative;
+			width: 100%;
+			height: 646.88px;
+			overflow: hidden;
+		}
+		.slider-container > img {
+			width: 100%;
+			max-height: 648.88px;
+			height: 100%;
+			border-radius: 10px;
+			margin: 10px 0px;
+
+			position: absolute;
+			top: 0;
+			left: 0;
+			cursor: col-resize;
+		}
+		.slider-after {
+			clip: rect(0, 250px, 300px, 0); /* Отображает только часть изображения */
+		}
+		.slider-handle {
+			position: absolute;
+			left: 50%;
+			width: 4px;
+			height: 100%;
+			cursor: col-resize;
+			transform: translateX(-50%);
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		.clip-pos {
+			width: 100px;
+			height: 50px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: #14141480;
+			position: absolute;
+			z-index: 10;
+			outline: none;
+			border: none;
+			border-radius: 10px;
+			top: 10px;
+			color: #ffbe41;
+			font-size: 22px;
+			margin: 20px;
+		}
 		.section__1 > p {
 			margin: 10px 0;
 			font-size: 20px;
@@ -96,7 +146,21 @@
 				</p>
 				<img src="1.webp" alt="" class="item">
 				<img src="2.webp" alt="" class="item">
-				<img src="3.webp" alt="" class="item">
+
+				<div class="slider-container" id="slider">
+					<span style="left: 10px;" class="clip-pos">До</span>
+					<img src="/img/После.jpg" alt="До" class="slider-before">
+					<img src="/img/До.jpg" alt="После" class="slider-after">
+					<span style="right: 10px;" class="clip-pos">После</span>
+					<div class="slider-handle" id="sliderHandle">
+						<label style="width: 2px; height: 45%; background-color: #222; cursor: col-resize;"></label>
+						<label style="width: 30px; height: 30px; border-radius: 50%; border: 2px solid #222; display: flex; justify-content: space-around; align-items: center; cursor: col-resize;">
+							<i class="fa-solid fa-caret-left"></i>
+							<i class="fa-solid fa-caret-right"></i>
+						</label>
+						<label style="width: 2px; height: 45%; background-color: #222; cursor: col-resize;"></label>
+					</div>
+				</div>
 				<img src="4.webp" alt="" class="item">
 				<img src="5.webp" alt="" class="item">
 			</section>
@@ -105,7 +169,9 @@
 			<i class="fa-solid fa-xmark" id="fullScreenBtn__close"></i>
 
 			<div class="fullScreen__window">
+				<i class="fa-solid fa-arrow-left" id="fullScreenBtn__ToLeft" onclick="ArrowToLeft()"></i>
 				<img src="" alt="" id="fullScreen__image" style="object-fit: cover;">
+				<i class="fa-solid fa-arrow-right" id="fullScreenBtn__ToRight" onclick="ArrowToRight()"></i>
 			</div>
 
 			<div class="fullScreen__bottom">
@@ -191,6 +257,7 @@
 		let zoom_block = document.getElementById('zoom_block');
 
 		let currentImageIndex;
+		let lastImageIndex = 5;
 
 		document.querySelectorAll('.item').forEach((item, index) => {
 			item.addEventListener('click', () => {
@@ -207,6 +274,26 @@
 				fullScreenImage.style.maxHeight = '100%';
 			});
 		});
+
+		function ArrowToLeft(){
+		    if(currentImageIndex === 1){
+		        currentImageIndex = currentImageIndex;
+		        fullScreenImage.src = '' + currentImageIndex + '.webp';
+		    }else{
+		        currentImageIndex = currentImageIndex - 1;
+		        fullScreenImage.src = '' + currentImageIndex + '.webp';
+		    }
+		}
+
+		function ArrowToRight(){
+		    if(currentImageIndex === lastImageIndex){
+		        currentImageIndex = currentImageIndex;
+		        fullScreenImage.src = '' + currentImageIndex + '.webp';
+		    }else{
+		        currentImageIndex = currentImageIndex + 1;
+		        fullScreenImage.src = '' + currentImageIndex + '.webp';
+		    }
+		}
 
 		fullScreenBtnClose.addEventListener('click', function() {
 			fullScreenClose()
@@ -309,6 +396,25 @@
 			fullScreenImage.style.width = 100 + 10*size + '%';
 		}
 	</script>
+	<script>
+    const slider = document.getElementById('slider');
+    const handle = document.getElementById('sliderHandle');
+    const afterImg = slider.querySelector('.slider-after');
+
+    slider.addEventListener('mousemove', (e) => {
+      const rect = slider.getBoundingClientRect();
+      const offsetX = e.clientX - rect.left;
+      handle.style.left = `${offsetX}px`;
+      afterImg.style.clip = `rect(0, ${offsetX}px, ${rect.height}px, 0)`;
+    });
+
+    // slider.addEventListener('touchmove', (e) => {
+    //   const rect = slider.getBoundingClientRect();
+    //   const offsetX = e.touches[0].clientX - rect.left;
+    //   handle.style.left = `${offsetX}px`;
+    //   afterImg.style.clip = `rect(0, ${offsetX}px, ${rect.height}px, 0)`;
+    // });
+  </script>
 	<script src="/js/header.js"></script>
 </body>
 </html>

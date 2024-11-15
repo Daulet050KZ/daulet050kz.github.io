@@ -232,69 +232,6 @@
 		<span style="color: #fff;">©2023 Portfolio - Все права защищены</span>
 	</footer>
 	<script src="/js/links.js"></script>
-
-	<script>
-		let intro = document.querySelector('.intro img');
-
-		const introBars = [
-		    document.getElementById('intro-1'),
-		    document.getElementById('intro-2'),
-		    document.getElementById('intro-3'),
-		    document.getElementById('intro-4')
-		];
-
-		let currentStep = 0;
-		const introImages = [
-		    'intro/1.jpg',
-		    'intro/1.jpg',
-		    'intro/1.jpg',
-		    'intro/1.jpg'
-		];
-
-		function startSequence(step) {
-		    clearTimeouts();
-
-		    resetProgress(() => {
-		        currentStep = step;
-		        updateProgress(currentStep);
-		        intro.src = introImages[currentStep];
-		        currentStep++;
-
-		        if (currentStep >= introBars.length) {
-		            currentStep = 0;
-		        }
-
-		        setTimeout(() => startSequence(currentStep), 3000);
-		    });
-		}
-
-		function updateProgress(step) {
-		    introBars[step].querySelector('.intro-progress').style.width = '100%';
-		}
-
-		function resetProgress(callback) {
-		    introBars.forEach(bar => {
-		        bar.querySelector('.intro-progress').style.width = '0%';
-		    });
-
-		    setTimeout(callback, 100);
-		}
-
-		function clearTimeouts() {
-		    let id = window.setTimeout(function() {}, 0);
-		    while (id--) {
-		        window.clearTimeout(id);
-		    }
-		}
-
-		introBars.forEach((bar, index) => {
-		    bar.addEventListener('click', () => {
-		        startSequence(index);
-		    });
-		});
-
-		startSequence(0);
-	</script>
 	<script>
 		function handleResize() {
 		    if (window.matchMedia('(max-width: 1023px)').matches) {

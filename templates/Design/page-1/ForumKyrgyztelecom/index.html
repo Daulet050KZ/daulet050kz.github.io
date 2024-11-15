@@ -103,7 +103,9 @@
 			<i class="fa-solid fa-xmark" id="fullScreenBtn__close"></i>
 
 			<div class="fullScreen__window">
+				<i class="fa-solid fa-arrow-left" id="fullScreenBtn__ToLeft" onclick="ArrowToLeft()"></i>
 				<img src="" alt="" id="fullScreen__image" style="object-fit: cover;">
+				<i class="fa-solid fa-arrow-right" id="fullScreenBtn__ToRight" onclick="ArrowToRight()"></i>
 			</div>
 
 			<div class="fullScreen__bottom">
@@ -180,6 +182,7 @@
 		let zoom_block = document.getElementById('zoom_block');
 
 		let currentImageIndex;
+		let lastImageIndex = 5;
 
 		document.querySelectorAll('.item').forEach((item, index) => {
 			item.addEventListener('click', () => {
@@ -196,6 +199,26 @@
 				fullScreenImage.style.maxHeight = '100%';
 			});
 		});
+
+		function ArrowToLeft(){
+		    if(currentImageIndex === 1){
+		        currentImageIndex = currentImageIndex;
+		        fullScreenImage.src = '' + currentImageIndex + '.webp';
+		    }else{
+		        currentImageIndex = currentImageIndex - 1;
+		        fullScreenImage.src = '' + currentImageIndex + '.webp';
+		    }
+		}
+
+		function ArrowToRight(){
+		    if(currentImageIndex === lastImageIndex){
+		        currentImageIndex = currentImageIndex;
+		        fullScreenImage.src = '' + currentImageIndex + '.webp';
+		    }else{
+		        currentImageIndex = currentImageIndex + 1;
+		        fullScreenImage.src = '' + currentImageIndex + '.webp';
+		    }
+		}
 
 		fullScreenBtnClose.addEventListener('click', function() {
 			fullScreenClose()
