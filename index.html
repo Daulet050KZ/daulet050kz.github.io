@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ex Works | Лента</title>
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.3.0/css/all.css">
+
+	<link rel="stylesheet" href="/css/globalStyle.css">
+	<link rel="stylesheet" href="/css/burger.css">
+	<link rel="stylesheet" href="/css/fonts.css">
+
+	<link rel="stylesheet" href="/css/header.css">
+	<link rel="stylesheet" href="/css/main.css">
+	<link rel="stylesheet" href="/css/footer.css">
+
+	<link rel="stylesheet" href="/css/Lenta.css">
+	<link rel="stylesheet" href="/css/sidebar.css">
+	<link rel="stylesheet" href="/css/adaptive.css">
+</head>
+<body>
+	<header>
+		<a href="#" class="header__brand"><img src="/img/logogroup2.png" alt=""><h2>EX Works | Crossout</h2></a>
+		<div style="width: 150px;"></div>
+		<div class="header__menu">
+			<a href="" class="currentPage">Лента</a>
+			<a href="">Картотека</a>
+			<a href="">Фотогазета</a>
+			<a href="">Персонажи</a>
+			<a href="">Соавторство</a>
+			<a href="">Покрасочная</a>
+			<a href="">Группировки</a>
+			<a href="">Книжная полка</a>
+			<a href="">Транспортный архив</a>
+			<a href="">Автомобильные марки</a>
+		</div>
+
+		<div id="nav-icon6">
+			<span></span>
+		</div>
+
+		<div id="burger">
+			<div>
+				<a href="" class="currentPage nav1"><span>•</span><h2>Лента</h2></a>
+				<a href="" class="nav2"><span>•</span><h2>Картотека</h2></a>
+				<a href="" class="nav3"><span>•</span><h2>Фотогазета</h2></a>
+				<a href="" class="nav4"><span>•</span><h2>Персонажи</h2></a>
+				<a href="" class="nav5"><span>•</span><h2>Соавторство</h2></a>
+				<a href="" class="nav6"><span>•</span><h2>Покрасочная</h2></a>
+				<a href="" class="nav7"><span>•</span><h2>Группировки</h2></a>
+				<a href="" class="nav8"><span>•</span><h2>Книжная полка</h2></a>
+				<a href="" class="nav9"><span>•</span><h2>Транспортный архив</h2></a>
+				<a href="" class="nav10"><span>•</span><h2>Автомобильные марки</h2></a>
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<aside class="sb__left">
+			<div class="sb__account">
+				<div class="sb__center">
+					<div style="display: flex;">
+						<img src="/img/unknown-user.png" alt="" style="width: 60px; height: 60px; border-radius: 50%;">
+						<div style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+							<a href="" style="font-family: 'ISOCPEUR'; font-size: 16px; font-weight: 700; color: #a5a5a5; transition: .3s;" onmouseover="this.style.color = '#f98d00';" onmouseout="this.style.color = '#a5a5a5';">Войти в профиль</a>
+							<span style="font-family: 'ISOCPEUR'; font-size: 16px; font-weight: 700; color: #393939;">чтобы оценивать посты и оставлять комментарии</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="sb__filter sb-category">
+				<div class="sb__center">
+					<h3>Отображать посты категории:</h3>
+					<div style="height: 5px;"></div>
+					<h3><input type="checkbox" id="filter-AM" name="filter-category"><label for="filter-AM"></label> Автомобильные марки</h3>
+					<div style="height: 5px;"></div>
+					<h3><input type="checkbox" id="filter-TA" name="filter-category"><label for="filter-TA"></label> Транспортный архив</h3>
+					<div style="height: 5px;"></div>
+					<h3><input type="checkbox" id="filter-HT" name="filter-category"><label for="filter-HT"></label> Книжная полка</h3>
+					<div style="height: 5px;"></div>
+					<h3><input type="checkbox" id="filter-PT" name="filter-category"><label for="filter-PT"></label> Покрасочная</h3>
+					<div style="height: 5px;"></div>
+					<h3><input type="checkbox" id="filter-AW" name="filter-category"><label for="filter-AW"></label> Фотогазета</h3>
+					<div style="height: 5px;"></div>
+					<h3><input type="checkbox" id="filter-FT" name="filter-category"><label for="filter-FT"></label> Группировки</h3>
+					<div style="height: 5px;"></div>
+					<h3><input type="checkbox" id="filter-LT" name="filter-category"><label for="filter-LT"></label> Картотека</h3>
+					<div style="height: 5px;"></div>
+					<h3><input type="checkbox" id="filter-PS" name="filter-category"><label for="filter-PS"></label> Персонажи</h3>
+				</div>
+			</div>
+			<div class="sb__filter sb-postingDate">
+				<div class="sb__center">
+					<h3>Показать посты за:</h3>
+					<div style="height: 5px;"></div>
+					<h3><input type="radio" id="filter-week" name="filter-postingDate"><label for="filter-week"></label> Последнюю неделю</h3>
+					<div style="height: 5px;"></div>
+					<h3><input type="radio" id="filter-month"  name="filter-postingDate"><label for="filter-month"></label> Последний месяц</h3>
+					<div style="height: 5px;"></div>
+					<h3><input type="radio" id="filter-day"  name="filter-postingDate"><label for="filter-day"></label> Последний день</h3>
+					<div style="height: 5px;"></div>
+					<h3><input type="radio" id="filter-period"  name="filter-postingDate"><label for="filter-period"></label> Выбор периода:</h3>
+					<div style="height: 5px;"></div>
+					<h3><input type="number" id="filter-period-from" placeholder="31.12.2000"> <span style="margin: 0px 10px;">По</span> <input type="number" id="filter-period-to" placeholder="31.12.2025"></h3>
+				</div>
+			</div>
+			<div class="sb__filter sb-postRate">
+				<div class="sb__center">
+					<h3>Показать посты с оценкой:</h3>
+					<div style="height: 5px;"></div>
+					<h3><input type="checkbox" id="filter-rate-5"><label for="filter-rate-5"></label> ★ ★ ★ ★ ★</h3>
+					<div style="height: 5px;"></div>
+					<h3><input type="checkbox" id="filter-rate-4"><label for="filter-rate-4"></label> ★ ★ ★ ★</h3>
+					<div style="height: 5px;"></div>
+					<h3><input type="checkbox" id="filter-rate-3"><label for="filter-rate-3"></label> ★ ★ ★</h3>
+					<div style="height: 5px;"></div>
+					<h3><input type="checkbox" id="filter-rate-2"><label for="filter-rate-2"></label> ★ ★</h3>
+					<div style="height: 5px;"></div>
+					<h3><input type="checkbox" id="filter-rate-1"><label for="filter-rate-1"></label> ★</h3>
+				</div>
+			</div>
+
+			<div class="sb__filter">
+					<button class="btn" id="clearFilter">Сбросить фильтры</button>
+			</div>
+		</aside>
+
+		<div class="main__center">
+			<div id="search">
+				<i class="fa-solid fa-search" style="position: absolute; z-index: 1; color: #393939; padding: 10px 7.5px;"></i>
+				<input type="text" placeholder="Введите для поиска">
+			</div>
+			<div id="search_no_result" style="display: none">
+				<div class="search_no_result_center" style="display: flex; flex-direction: column;">
+					<img src="/img/oops.png" alt="" style="position: absolute; top: 30%; left: 50%; transform: translateX(-50%); opacity: .5;">
+					<h1 style="text-align: center; color: #A5A5A5; font-size: 22px; font-weight: 700; font-family: 'ISOCPEUR';">Ничего не найдено</h1>
+					<h3 style="color: #A5A5A5; font-size: 20px; font-weight: 700; font-family: 'ISOCPEUR';">Ваш запрос не дал результатов, одна из причин:</h3>
+					<p style="color: #A5A5A5; font-size: 18px; font-weight: 700; font-family: 'ISOCPEUR';">- Вы ввели запрос некорректно.</p>
+					<p style="color: #A5A5A5; font-size: 18px; font-weight: 700; font-family: 'ISOCPEUR';">- Вашего запроса не существует.</p>
+				</div>
+			</div>
+
+			<div class="content TA" data-contentTitle='Exmule'>
+				<div class="content__top">
+					<div style="display: flex;">
+						<h2 class="content__top-id">ID: 0</h2>
+						<div class="content__top-category">
+							<svg xmlns="http://www.w3.org/2000/svg" width="1793.982" height="1793.982" viewBox="0 0 1793.982 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 5px; margin-right: 2.5px;">
+								<text x="257.501415" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="1793.982" height="1793.982" viewBox="0 0 1793.982 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 2.5px; margin-right: 2.5px;">
+								<text x="1.501415" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="2049.02083" height="1793.982" viewBox="0 0 2049.02083 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 2.5px; margin-right: 2.5px;">
+								<text x="1.02083" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="1793.982" height="1793.982" viewBox="0 0 1793.982 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 2.5px; margin-right: 2.5px;">
+								<text x="1.501415" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="1793.982" height="1793.982" viewBox="0 0 1793.982 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 2.5px; margin-right: 2.5px;">
+								<text x="1.501415" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="1793.982" height="1793.982" viewBox="0 0 1793.982 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 2.5px; margin-right: 2.5px;">
+								<text x="65.501415" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="1921.02083" height="1793.982" viewBox="0 0 1921.02083 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 2.5px; margin-right: 5px;">
+								<text x="1.02083" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+						</div>
+					</div>
+					<div class="content__top-rate">☆ ☆ ☆ ☆ ☆</div>
+					<h2 class="content__top-postingDate">Опубликовано: 15.03.2024 г.</h2>
+				</div>
+				<div class="content__center">
+					<a href="" class="link" style="padding: 10px 0;">Первоисточник: VK Group / EX Works | Crossout / Post "Exmule"</a>
+					<div style="display: flex; width: 100%; margin-bottom: 5px;">
+						<button class="btn" style="width: calc(100% / 2 - 2.5px);">Узнать больше</button>
+						<div style="width: 5px;"></div>
+						<button class="btn" style="width: calc(100% / 2 - 2.5px);">Транспортный архив</button>
+					</div>
+					<h2>◁ Exmule ▷</h2>
+					<p>Грузовик мастерской Exnewest. Построен на раме длиннобазной Зари, тщательно отремонтированной и качественно модифицированной самим Яразом. В основном используется для транспортировки огромных объёмов запчастей, но и любая другая подходящая работа ему по плечу.</p>
+					<div class="content__images TA">
+						<img src="/img/Exmule..jpg" alt="">
+						<div style="width: 5px;"></div>
+						<img src="/img/Exmule.jpg" alt="">
+					</div>
+				</div>
+				<div class="content__comment">
+					<span style="cursor: pointer;">Показать комментарии <i class="fa-solid fa-caret-down" style="margin-left: 5px;"></i></span>
+				</div>
+			</div>
+
+			<div class="content HT" data-contentTitle='Охота на волка'>
+				<div class="content__top">
+					<div style="display: flex;">
+						<h2 class="content__top-id">ID: 0</h2>
+						<div class="content__top-category">
+							<svg xmlns="http://www.w3.org/2000/svg" width="1793.982" height="1793.982" viewBox="0 0 1793.982 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 5px; margin-right: 2.5px;">
+								<text x="257.501415" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="1793.982" height="1793.982" viewBox="0 0 1793.982 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 2.5px; margin-right: 2.5px;">
+								<text x="1.501415" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="2049.02083" height="1793.982" viewBox="0 0 2049.02083 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 2.5px; margin-right: 2.5px;">
+								<text x="1.02083" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="1793.982" height="1793.982" viewBox="0 0 1793.982 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 2.5px; margin-right: 2.5px;">
+								<text x="1.501415" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="1793.982" height="1793.982" viewBox="0 0 1793.982 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 2.5px; margin-right: 2.5px;">
+								<text x="1.501415" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="1793.982" height="1793.982" viewBox="0 0 1793.982 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 2.5px; margin-right: 2.5px;">
+								<text x="65.501415" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="1921.02083" height="1793.982" viewBox="0 0 1921.02083 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 2.5px; margin-right: 5px;">
+								<text x="1.02083" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+						</div>
+					</div>
+					<div class="content__top-rate">☆ ☆ ☆ ☆ ☆</div>
+					<h2 class="content__top-postingDate">Опубликовано: 15.03.2024 г.</h2>
+				</div>
+				<div class="content__center">
+					<a href="" class="link" style="padding: 10px 0;">Первоисточник: VK Group / EX Works | Crossout / Post "Exmule"</a>
+					<div style="display: flex; width: 100%; margin-bottom: 5px;">
+						<button class="btn" style="width: calc(100% / 2 - 2.5px);">Узнать больше</button>
+						<div style="width: 5px;"></div>
+						<button class="btn" style="width: calc(100% / 2 - 2.5px);">Книжная полка</button>
+					</div>
+					<h2>◁ Охота на волка ▷</h2>
+					<p>Тихая бескрайняя пустыня на южных границах Долины редко используется для поездок. Невыносимые перепады температур, крупные дюны и непреодолимые без должной подготовки расстояния останавливают большую часть забредающих туда путников. Только самые подготовленные и отчаянные поедут через пустыню. Вольфганг соответствовал этим параметрам. Мужчина среднего возраста с грубыми чертами лица...</p>
+					<div class="content__images HT">
+						<img src="/img/Exmule..jpg" alt="" class="content__images-cover">
+						<img src="/img/Exmule..jpg" alt="">
+						<div style="width: 5px;"></div>
+						<img src="/img/Exmule.jpg" alt="">
+					</div>
+				</div>
+				<div class="content__comment">
+					<span style="cursor: pointer;">Показать комментарии <i class="fa-solid fa-caret-down" style="margin-left: 5px;"></i></span>
+				</div>
+			</div>
+
+			<div class="content AW" data-contentTitle='Strider'>
+				<div class="content__top">
+					<div style="display: flex;">
+						<h2 class="content__top-id">ID: 0</h2>
+						<div class="content__top-category">
+							<svg xmlns="http://www.w3.org/2000/svg" width="1793.982" height="1793.982" viewBox="0 0 1793.982 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 5px; margin-right: 2.5px;">
+								<text x="257.501415" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="1793.982" height="1793.982" viewBox="0 0 1793.982 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 2.5px; margin-right: 2.5px;">
+								<text x="1.501415" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="2049.02083" height="1793.982" viewBox="0 0 2049.02083 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 2.5px; margin-right: 2.5px;">
+								<text x="1.02083" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="1793.982" height="1793.982" viewBox="0 0 1793.982 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 2.5px; margin-right: 2.5px;">
+								<text x="1.501415" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="1793.982" height="1793.982" viewBox="0 0 1793.982 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 2.5px; margin-right: 2.5px;">
+								<text x="1.501415" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="1793.982" height="1793.982" viewBox="0 0 1793.982 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 2.5px; margin-right: 2.5px;">
+								<text x="65.501415" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="1921.02083" height="1793.982" viewBox="0 0 1921.02083 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 2.5px; margin-right: 5px;">
+								<text x="1.02083" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+						</div>
+					</div>
+					<div class="content__top-rate">☆ ☆ ☆ ☆ ☆</div>
+					<h2 class="content__top-postingDate">Опубликовано: 15.03.2024 г.</h2>
+				</div>
+				<div class="content__center">
+					<a href="" class="link" style="padding: 10px 0;">Первоисточник: VK Group / EX Works | Crossout / Post "Exmule"</a>
+					<div style="display: flex; width: 100%; margin-bottom: 5px;">
+						<button class="btn" style="width: calc(100% / 2 - 2.5px);">Узнать больше</button>
+						<div style="width: 5px;"></div>
+						<button class="btn" style="width: calc(100% / 2 - 2.5px);">Фотогазета</button>
+					</div>
+					<h2>◁ Strider ▷</h2>
+					<p>Лёгкий вездеход на базе крайне распространённого Гонца. Конструкция облегчена в угоду брони, установленной в кабине и отвалу - для защиты самого важного: двигателя и водителя. Последний, кстати, изъездил почти все труднодоступные уголки пустошей: от болот до пустынь, от тайги до тундры. Разве что на севере машина не была, и то потому, что она не готова к столь низким температурам.</p>
+					<div class="content__images AW">
+						<img src="/img/Exmule..jpg" alt="" class="content__images-cover">
+						<img src="/img/Exmule..jpg" alt="">
+						<div style="width: 5px;"></div>
+						<img src="/img/Exmule.jpg" alt="">
+					</div>
+				</div>
+				<div class="content__comment">
+					<span style="cursor: pointer;">Показать комментарии <i class="fa-solid fa-caret-down" style="margin-left: 5px;"></i></span>
+				</div>
+			</div>
+
+			<div class="content LT" data-contentTitle='Strider'>
+				<div class="content__top">
+					<div style="display: flex;">
+						<h2 class="content__top-id">ID: 0</h2>
+						<div class="content__top-category">
+							<svg xmlns="http://www.w3.org/2000/svg" width="1793.982" height="1793.982" viewBox="0 0 1793.982 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 5px; margin-right: 2.5px;">
+								<text x="257.501415" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="1793.982" height="1793.982" viewBox="0 0 1793.982 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 2.5px; margin-right: 2.5px;">
+								<text x="1.501415" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="2049.02083" height="1793.982" viewBox="0 0 2049.02083 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 2.5px; margin-right: 2.5px;">
+								<text x="1.02083" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="1793.982" height="1793.982" viewBox="0 0 1793.982 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 2.5px; margin-right: 2.5px;">
+								<text x="1.501415" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="1793.982" height="1793.982" viewBox="0 0 1793.982 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 2.5px; margin-right: 2.5px;">
+								<text x="1.501415" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="1793.982" height="1793.982" viewBox="0 0 1793.982 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 2.5px; margin-right: 2.5px;">
+								<text x="65.501415" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="1921.02083" height="1793.982" viewBox="0 0 1921.02083 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 2.5px; margin-right: 5px;">
+								<text x="1.02083" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+						</div>
+					</div>
+					<div class="content__top-rate">☆ ☆ ☆ ☆ ☆</div>
+					<h2 class="content__top-postingDate">Опубликовано: 15.03.2024 г.</h2>
+				</div>
+				<div class="content__center">
+					<a href="" class="link" style="padding: 10px 0;">Первоисточник: VK Group / EX Works | Crossout / Post "Exmule"</a>
+					<div style="display: flex; width: 100%; margin-bottom: 5px;">
+						<button class="btn" style="width: calc(100% / 2 - 2.5px);">Узнать больше</button>
+						<div style="width: 5px;"></div>
+						<button class="btn" style="width: calc(100% / 2 - 2.5px);">Картотека</button>
+					</div>
+					<h2>◁ Strider ▷</h2>
+					<p>Лёгкий вездеход на базе крайне распространённого Гонца. Конструкция облегчена в угоду брони, установленной в кабине и отвалу - для защиты самого важного: двигателя и водителя. Последний, кстати, изъездил почти все труднодоступные уголки пустошей: от болот до пустынь, от тайги до тундры. Разве что на севере машина не была, и то потому, что она не готова к столь низким температурам.</p>
+					<div class="content__images LT">
+						<img src="/img/Exmule..jpg" alt="" class="content__images-cover">
+						<div>
+							<img src="/img/Exmule..jpg" alt="">
+							<div style="width: 5px;"></div>
+							<img src="/img/Exmule.jpg" alt="">
+							<div style="width: 5px;"></div>
+							<img src="/img/Exmule.jpg" alt="">
+							<div style="width: 5px;"></div>
+							<img src="/img/Exmule.jpg" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="content__comment">
+					<span style="cursor: pointer;">Показать комментарии <i class="fa-solid fa-caret-down" style="margin-left: 5px;"></i></span>
+				</div>
+			</div>
+
+			<div class="content PS" data-contentTitle='Strider'>
+				<div class="content__top">
+					<div style="display: flex;">
+						<h2 class="content__top-id">ID: 0</h2>
+						<div class="content__top-category">
+							<svg xmlns="http://www.w3.org/2000/svg" width="1793.982" height="1793.982" viewBox="0 0 1793.982 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 5px; margin-right: 2.5px;">
+								<text x="257.501415" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="1793.982" height="1793.982" viewBox="0 0 1793.982 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 2.5px; margin-right: 2.5px;">
+								<text x="1.501415" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="2049.02083" height="1793.982" viewBox="0 0 2049.02083 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 2.5px; margin-right: 2.5px;">
+								<text x="1.02083" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="1793.982" height="1793.982" viewBox="0 0 1793.982 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 2.5px; margin-right: 2.5px;">
+								<text x="1.501415" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="1793.982" height="1793.982" viewBox="0 0 1793.982 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 2.5px; margin-right: 2.5px;">
+								<text x="1.501415" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="1793.982" height="1793.982" viewBox="0 0 1793.982 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 2.5px; margin-right: 2.5px;">
+								<text x="65.501415" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="1921.02083" height="1793.982" viewBox="0 0 1921.02083 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 2.5px; margin-right: 5px;">
+								<text x="1.02083" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+						</div>
+					</div>
+					<div class="content__top-rate">☆ ☆ ☆ ☆ ☆</div>
+					<h2 class="content__top-postingDate">Опубликовано: 15.03.2024 г.</h2>
+				</div>
+				<div class="content__center">
+					<a href="" class="link" style="padding: 10px 0;">Первоисточник: VK Group / EX Works | Crossout / Post "Exmule"</a>
+					<div style="display: flex; width: 100%; margin-bottom: 5px;">
+						<button class="btn" style="width: calc(100% / 2 - 2.5px);">Узнать больше</button>
+						<div style="width: 5px;"></div>
+						<button class="btn" style="width: calc(100% / 2 - 2.5px);">Персонажи</button>
+					</div>
+					<h2>◁ Strider ▷</h2>
+					<p>Лёгкий вездеход на базе крайне распространённого Гонца. Конструкция облегчена в угоду брони, установленной в кабине и отвалу - для защиты самого важного: двигателя и водителя. Последний, кстати, изъездил почти все труднодоступные уголки пустошей: от болот до пустынь, от тайги до тундры. Разве что на севере машина не была, и то потому, что она не готова к столь низким температурам.</p>
+					<div class="content__images PS">
+						<img src="/img/testB.png" alt="" class="content__images-person">
+						<div>
+							<img src="/img/testA.png" alt="">
+							<div style="height: 5px;"></div>
+							<img src="/img/testC.jpg" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="content__comment">
+					<span style="cursor: pointer;">Показать комментарии <i class="fa-solid fa-caret-down" style="margin-left: 5px;"></i></span>
+				</div>
+			</div>
+
+			<div class="content FT" data-contentTitle='Strider'>
+				<div class="content__top">
+					<div style="display: flex;">
+						<h2 class="content__top-id">ID: 0</h2>
+						<div class="content__top-category">
+							<svg xmlns="http://www.w3.org/2000/svg" width="1793.982" height="1793.982" viewBox="0 0 1793.982 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 5px; margin-right: 2.5px;">
+								<text x="257.501415" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="1793.982" height="1793.982" viewBox="0 0 1793.982 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 2.5px; margin-right: 2.5px;">
+								<text x="1.501415" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="2049.02083" height="1793.982" viewBox="0 0 2049.02083 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 2.5px; margin-right: 2.5px;">
+								<text x="1.02083" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="1793.982" height="1793.982" viewBox="0 0 1793.982 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 2.5px; margin-right: 2.5px;">
+								<text x="1.501415" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="1793.982" height="1793.982" viewBox="0 0 1793.982 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 2.5px; margin-right: 2.5px;">
+								<text x="1.501415" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="1793.982" height="1793.982" viewBox="0 0 1793.982 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 2.5px; margin-right: 2.5px;">
+								<text x="65.501415" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="1921.02083" height="1793.982" viewBox="0 0 1921.02083 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 2.5px; margin-right: 5px;">
+								<text x="1.02083" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+						</div>
+					</div>
+					<div class="content__top-rate">☆ ☆ ☆ ☆ ☆</div>
+					<h2 class="content__top-postingDate">Опубликовано: 15.03.2024 г.</h2>
+				</div>
+				<div class="content__center">
+					<a href="" class="link" style="padding: 10px 0;">Первоисточник: VK Group / EX Works | Crossout / Post "Exmule"</a>
+					<div style="display: flex; width: 100%; margin-bottom: 5px;">
+						<button class="btn" style="width: calc(100% / 2 - 2.5px);">Узнать больше</button>
+						<div style="width: 5px;"></div>
+						<button class="btn" style="width: calc(100% / 2 - 2.5px);">Группировки</button>
+					</div>
+					<h2>◁ Strider ▷</h2>
+					<p>Лёгкий вездеход на базе крайне распространённого Гонца. Конструкция облегчена в угоду брони, установленной в кабине и отвалу - для защиты самого важного: двигателя и водителя. Последний, кстати, изъездил почти все труднодоступные уголки пустошей: от болот до пустынь, от тайги до тундры. Разве что на севере машина не была, и то потому, что она не готова к столь низким температурам.</p>
+					<div class="content__images FT">
+						<div class="level-1">
+							<img src="/img/FT1.png" alt="" class="content__images-person">
+							<div>
+								<img src="/img/FT2.png" alt="">
+								<div style="width: 5px;"></div>
+								<img src="/img/FT3.png" alt="">
+								<img src="/img/FT4.jpg" alt="" class="FT-crafts">
+							</div>
+						</div>
+
+						<div class="level-2">
+							<img src="/img/FT5.png" alt="">
+							<div style="width: 5px;"></div>
+							<img src="/img/FT5.png" alt="">
+							<div style="width: 5px;"></div>
+							<img src="/img/FT5.png" alt="">
+							<div style="width: 5px;"></div>
+							<img src="/img/FT5.png" alt="">
+							<div style="width: 5px;"></div>
+							<img src="/img/FT5.png" alt="">
+							<div style="width: 5px;"></div>
+							<img src="/img/FT5.png" alt="">
+						</div>
+						<div class="level-3">
+							<img src="/img/FT5.png" alt="">
+							<div style="width: 5px;"></div>
+							<img src="/img/FT5.png" alt="">
+							<div style="width: 5px;"></div>
+							<img src="/img/FT5.png" alt="">
+							<div style="width: 5px;"></div>
+							<img src="/img/FT5.png" alt="">
+							<div style="width: 5px;"></div>
+							<img src="/img/FT5.png" alt="">
+							<div style="width: 5px;"></div>
+							<img src="/img/FT5.png" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="content__comment">
+					<span style="cursor: pointer;">Показать комментарии <i class="fa-solid fa-caret-down" style="margin-left: 5px;"></i></span>
+				</div>
+			</div>
+
+			<div class="content AM" data-contentTitle='Strider'>
+				<div class="content__top">
+					<div style="display: flex;">
+						<h2 class="content__top-id">ID: 0</h2>
+						<div class="content__top-category">
+							<svg xmlns="http://www.w3.org/2000/svg" width="1793.982" height="1793.982" viewBox="0 0 1793.982 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 5px; margin-right: 2.5px;">
+								<text x="257.501415" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="1793.982" height="1793.982" viewBox="0 0 1793.982 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 2.5px; margin-right: 2.5px;">
+								<text x="1.501415" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="2049.02083" height="1793.982" viewBox="0 0 2049.02083 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 2.5px; margin-right: 2.5px;">
+								<text x="1.02083" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="1793.982" height="1793.982" viewBox="0 0 1793.982 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 2.5px; margin-right: 2.5px;">
+								<text x="1.501415" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="1793.982" height="1793.982" viewBox="0 0 1793.982 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 2.5px; margin-right: 2.5px;">
+								<text x="1.501415" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="1793.982" height="1793.982" viewBox="0 0 1793.982 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 2.5px; margin-right: 2.5px;">
+								<text x="65.501415" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="1921.02083" height="1793.982" viewBox="0 0 1921.02083 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 2.5px; margin-right: 5px;">
+								<text x="1.02083" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+						</div>
+					</div>
+					<div class="content__top-rate">☆ ☆ ☆ ☆ ☆</div>
+					<h2 class="content__top-postingDate">Опубликовано: 15.03.2024 г.</h2>
+				</div>
+				<div class="content__center">
+					<a href="" class="link" style="padding: 10px 0;">Первоисточник: VK Group / EX Works | Crossout / Post "Exmule"</a>
+					<div style="display: flex; width: 100%; margin-bottom: 5px;">
+						<button class="btn" style="width: calc(100% / 2 - 2.5px);">Узнать больше</button>
+						<div style="width: 5px;"></div>
+						<button class="btn" style="width: calc(100% / 2 - 2.5px);">Автомобильные марки</button>
+					</div>
+					<h2>◁ Strider ▷</h2>
+					<p>Лёгкий вездеход на базе крайне распространённого Гонца. Конструкция облегчена в угоду брони, установленной в кабине и отвалу - для защиты самого важного: двигателя и водителя. Последний, кстати, изъездил почти все труднодоступные уголки пустошей: от болот до пустынь, от тайги до тундры. Разве что на севере машина не была, и то потому, что она не готова к столь низким температурам.</p>
+					<div class="content__images AM">
+						<div class="level-1">
+							<img src="/img/AM1.png" alt="" class="content__images-left">
+							<img src="/img/AM2.png" alt="">
+						</div>
+						<div class="level-2">
+							<img src="/img/AM3.png" alt="" class="content__images-left">
+							<img src="/img/AM4.jpg" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="content__comment">
+					<span style="cursor: pointer;">Показать комментарии <i class="fa-solid fa-caret-down" style="margin-left: 5px;"></i></span>
+				</div>
+			</div>
+
+			<div class="content PT" data-contentTitle='Обновление Frostbite Assault'>
+				<div class="content__top">
+					<div style="display: flex;">
+						<h2 class="content__top-id">ID: 0</h2>
+						<div class="content__top-category">
+							<svg xmlns="http://www.w3.org/2000/svg" width="1793.982" height="1793.982" viewBox="0 0 1793.982 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 5px; margin-right: 2.5px;">
+								<text x="257.501415" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="1793.982" height="1793.982" viewBox="0 0 1793.982 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 2.5px; margin-right: 2.5px;">
+								<text x="1.501415" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="2049.02083" height="1793.982" viewBox="0 0 2049.02083 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 2.5px; margin-right: 2.5px;">
+								<text x="1.02083" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="1793.982" height="1793.982" viewBox="0 0 1793.982 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 2.5px; margin-right: 2.5px;">
+								<text x="1.501415" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="1793.982" height="1793.982" viewBox="0 0 1793.982 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 2.5px; margin-right: 2.5px;">
+								<text x="1.501415" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="1793.982" height="1793.982" viewBox="0 0 1793.982 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 2.5px; margin-right: 2.5px;">
+								<text x="65.501415" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="1921.02083" height="1793.982" viewBox="0 0 1921.02083 1793.982" style="direction: ltr; color:rgba(165, 165, 165, 0.25); margin-left: 2.5px; margin-right: 5px;">
+								<text x="1.02083" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text>
+							</svg>
+						</div>
+					</div>
+					<div class="content__top-rate">☆ ☆ ☆ ☆ ☆</div>
+					<h2 class="content__top-postingDate">Опубликовано: 15.03.2024 г.</h2>
+				</div>
+				<div class="content__center">
+					<a href="" class="link" style="padding: 10px 0;">Первоисточник: None</a>
+					<div style="display: flex; width: 100%; margin-bottom: 5px;">
+						<button class="btn" style="width: calc(100% / 2 - 2.5px);">Узнать больше</button>
+						<div style="width: 5px;"></div>
+						<button class="btn" style="width: calc(100% / 2 - 2.5px);">Покрасочная</button>
+					</div>
+					<h2>◁ Обновление Frostbite Assault ▷</h2>
+					<div class="content__images PT">
+						<div class="PT-A">
+							<div class="PT-view">
+								<div>
+									<div>
+										<img src="/img/AM1.png" alt="">
+									</div>
+								</div>
+								<h2>
+									<svg xmlns="http://www.w3.org/2000/svg" width="1793.982" height="1793.982" viewBox="0 0 1793.982 1793.982" style="direction: ltr; color:#a5a5a5"><text x="129.501415" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text></svg>
+									Название картинки 
+									<svg xmlns="http://www.w3.org/2000/svg" width="1793.982" height="1793.982" viewBox="0 0 1793.982 1793.982" style="direction: ltr; color:#a5a5a5"><text x="129.501415" y="1537.02" font-size="1792" fill="currentColor" style="font-family: &quot;FontAwesome&quot;"></text></svg>
+								</h2>
+							</div>
+							<div class="PT-paint">
+								<img src="/img/AM1.png" alt="">
+								<div style="height: 5px;"></div>
+								<img src="/img/AM1.png" alt="">
+								<div style="height: 5px;"></div>
+								<img src="/img/AM1.png" alt="">
+								<div style="height: 5px;"></div>
+								<img src="/img/AM1.png" alt="">
+								<div style="height: 5px;"></div>
+								<img src="/img/AM1.png" alt="">
+								<div style="height: 5px;"></div>
+								<img src="/img/AM1.png" alt="">
+							</div>
+						</div>
+						<div class="PT-B">
+							<img src="/img/AM1.png" alt="">
+							<img src="/img/AM1.png" alt="">
+							<img src="/img/AM1.png" alt="">
+							<img src="/img/AM1.png" alt="">
+							<img src="/img/AM1.png" alt="">
+							<img src="/img/AM1.png" alt="">
+							<img src="/img/AM1.png" alt="">
+							<img src="/img/AM1.png" alt="">
+							<img src="/img/AM1.png" alt="">
+							<img src="/img/AM1.png" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="content__comment">
+					<span style="cursor: pointer;">Показать комментарии <i class="fa-solid fa-caret-down" style="margin-left: 5px;"></i></span>
+				</div>
+			</div>
+		</div>
+
+		<aside class="sb__right">
+			<div class="sb__bookmark">
+				<h3 style="margin-bottom: 5px; text-align: center; cursor: pointer; display: flex; align-items: center; justify-content: center;">Скрыть закладки <i class="fa-solid fa-caret-up" style="margin-left: 5px;"></i></h3>
+				<div class="sb__center" style="display: flex; flex-direction: column;">
+					<span style="text-align: center; width: 100%; color: #393939; font-family: 'ISOCPEUR'; font-size: 16px; font-weight: 700; line-height: 20px;">Сохранённые закладки отсутсвтуют</span>
+				</div>
+			</div>
+		</aside>
+	</main>
+	<footer></footer>
+
+	<script src="/js/burger.js"></script>
+	<script src="/js/header.js"></script>
+	<script src="/js/search.js"></script>
+</body>
+</html>

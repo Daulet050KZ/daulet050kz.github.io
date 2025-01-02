@@ -1,0 +1,128 @@
+.sb__left.sidebar_up,
+.sb__right.sidebar_up {
+	top: 10px;
+}
+
+
+.sb__left {
+	left: 180px;
+	top: 101px;
+}
+.sb__right {
+	right: 180px;
+	top: 101px;
+}
+
+.sb__left,
+.sb__right {
+	width: 300px;
+	margin: 0px 5px;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+
+	position: fixed;
+	transition: .3s;
+}
+
+.sb__account,
+.sb__filter,
+.sb__bookmark {
+	width: 100%;
+	background-color: #222;
+	border: 2px solid #393939;
+	margin: 5px 0;
+	padding: 5px;
+	display: block;
+}
+
+.sb__center {
+	display: block;
+	width: 100%;
+	background-color: #141414;
+	border: 2px solid #000;
+	padding: 5px;
+}
+
+.sb__center {
+	display: block;
+	width: 100%;
+	background-color: #141414;
+	border: 2px solid #000;
+	padding: 5px;
+}
+
+.sb__bookmark > h3,
+.sb__center > h3 {
+	font-family: 'ISOCPEUR';
+	font-size: 16px;
+	font-weight: 700;
+	color: #8C8C8C;
+	line-height: 20px;
+	display: flex;
+	align-items: center;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #a5a5a5;
+    background-color: #000;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-right: 5px;
+}
+
+input[type="radio"]:checked + label,
+input[type="checkbox"]:checked + label {
+    border-color: #a5a5a5;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+input[type="radio"]:checked + label::after,
+input[type="checkbox"]:checked + label::after {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: #a5a5a5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.sb__center > h3 > input[type="number"] {
+    border: 2px solid #393939;
+	background-color: #222;
+    width: 100%;
+	color: #8C8C8C;
+	font-family: 'Jura';
+	font-size: 18px;
+	font-weight: 700;
+	padding: 0 5px;
+	outline: none;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0; 
+}
+input[type="number"]::-webkit-input-placeholder {
+	color: #393939;
+}

@@ -1,0 +1,386 @@
+main {
+	width: 100%;
+	margin-top: 101px;
+	display: flex;
+	justify-content: center;
+}
+
+.section {
+	height: 10px;
+}
+
+.main__center {
+	width: 907px;
+	margin: 5px;
+	display: flex;
+	flex-direction: column;
+}
+
+#search {
+	width: 100%;
+	border: 2px solid #393939;
+	background-color: #222;
+	padding: 5px 5px;
+	margin-bottom: 10px;
+}
+
+#search > input {
+	color: #8C8C8C;
+	font-family: 'Jura';
+	font-size: 18px;
+	font-weight: 700;
+
+	width: 100%;
+	background-color: #141414;
+	border: 2px solid #000;
+	outline: none;
+	padding: 5px 0px 5px 25px;
+}
+
+#search > input::-webkit-input-placeholder {
+	color: #393939;
+}
+
+#search_no_result,
+.content {
+	width: 100%;
+	height: auto;
+	border: 2px solid #393939;
+	background-color: #222;
+	padding: 0px 5px;
+	margin-bottom: 10px;
+}
+
+.content__top {
+	width: 100%;
+	border-bottom: 2px solid #393939;
+	margin: 10px 0 0px 0;
+	padding-bottom: 5px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.content__top-id,
+.content__top-rate,
+.content__top-postingDate,
+.content__center > a,
+.content__comment > span {
+	font-family: 'ISOCPEUR';
+	font-size: 16px;
+	font-weight: 700;
+	color: #8C8C8C;
+}
+
+.content__top-category {
+	display: flex;
+	align-items: center;
+	width: auto;
+}
+
+.content__top-category > svg {
+	width: 15px;
+	height: 15px;
+	margin: 0px 2.5px;
+}
+.content__top-category > svg > text {
+	width: 12px;
+	height: 15px;
+}
+
+.content__center {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: auto;
+}
+
+.content__center > h2,
+.content__center > p,
+.PT-view > h2 {
+	font-family: 'ISOCPEUR';
+	font-size: 22px;
+	font-weight: 700;
+	color: #A5A5A5;
+	line-height: 24px;
+	text-transform: none;
+	margin: 5px 0;
+}
+
+.content__comment {
+	text-align: center;
+	margin: 5px 0;
+}
+
+/* Транспортный Архив (TA)  */
+
+.content__images.TA {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+.content__images.TA > img {
+	border: 2px solid #000;
+	width: calc(100% / 2 - 2.5px);
+}
+
+/* Книжная полка (HT)  */
+
+.content__images.HT {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.content__images.HT > img.content__images-cover {
+	border: 2px solid #000;
+	width: calc(100%);
+	margin-bottom: 5px;
+}
+
+.content__images.HT > img {
+	border: 2px solid #000;
+	width: calc(100% / 2 - 2.5px);
+}
+
+/* Фотогазета (AW)  */
+
+.content__images.AW {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.content__images.AW > img.content__images-cover {
+	border: 2px solid #000;
+	width: calc(100%);
+	margin-bottom: 5px;
+}
+
+.content__images.AW > img {
+	border: 2px solid #000;
+	width: calc(100% / 2 - 2.5px);
+}
+
+/* Картотека (LT)  */
+
+.content__images.LT {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.content__images.LT > div {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+.content__images.LT > img.content__images-cover {
+	border: 2px solid #000;
+	width: calc(100%);
+	margin-bottom: 5px;
+}
+
+.content__images.LT > div > img {
+	border: 2px solid #000;
+	width: calc(100% / 4 - 2.5px);
+}
+
+
+/* Персонажи (PS)  */
+
+.content__images.PS {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+.content__images.PS > div {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	margin-left: 5px;
+}
+.content__images.PS > img.content__images-person {
+	border: 2px solid #000;
+	width: calc(100% / 2 - 26.6px);
+}
+
+.content__images.PS > div > img {
+	border: 2px solid #000;
+	width: calc(100%);
+}
+
+/* Фракции (FT)  */
+
+.content__images.FT {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+.content__images.FT > .level-1 {
+	display: flex;
+	width: 100%;
+}
+
+.content__images.FT > .level-1 > img {
+	width: calc(100% / 2 - 2.5px);
+	margin-right: 5px;
+	border: 2px solid #000;
+}
+
+.content__images.FT > .level-1 > div {
+	width: calc(100% / 2 - 2.5px);
+	display: flex;
+	flex-wrap: wrap;
+}
+.content__images.FT > .level-1 > div > img{
+	width: calc(100% / 2 - 2.5px);
+	border: 2px solid #000;
+}
+
+.content__images.FT > .level-1 > div > .FT-crafts {
+	width: 100%;
+	margin-top: 5px;
+}
+
+.content__images.FT > .level-2,
+.content__images.FT > .level-3 {
+	width: 100%;
+	margin-top: 5px;
+	padding: 5px;
+	display: flex;
+	justify-content: space-between;
+	background-color: #141414;
+	border: 2px solid #000;
+}
+
+.content__images.FT > .level-2 > img,
+.content__images.FT > .level-3 > img {
+	width: calc(100% / 6 - 5px);
+	border: 2px solid #000;
+}
+
+/* Автомобильные марки (AM)  */
+
+.content__images.AM {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+.content__images.AM > .level-1 {
+	margin-bottom: 5px;
+}
+.content__images.AM > .level-1,
+.content__images.AM > .level-2 {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.content__images.AM > .level-1 > img.content__images-left,
+.content__images.AM > .level-2 > img.content__images-left {
+	width: 200px;
+	border: 2px solid #000;
+}
+
+.content__images.AM > .level-1 > img,
+.content__images.AM > .level-2 > img {
+	border: 2px solid #000;
+	width: calc(100% - 200px - 5px);
+}
+
+/* Покрасочная (PT)  */
+
+.content__images.PT {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.content__images.PT > .PT-A {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+
+.PT-view {
+	width: 100%;
+}
+
+.PT-view > div {
+	padding: 5px;
+	width: 100%;
+	border: 2px solid #000;
+	background-color: #141414;
+	height: auto;
+}
+.PT-view > div > div {
+	padding: 5px;
+	width: 100%;
+	height: auto;
+	border: 2px solid #000;
+	background-color: #132039;
+	display: flex;
+}
+.PT-view > div > div > img {
+	border: 2px solid #000;
+	width: 100%;
+}
+
+.PT-view > h2 {
+	width: 100%;
+	background-color: #141414;
+	padding: 5px 0;
+	margin-top: 5px;
+	margin-bottom: 0px;
+	border: 2px solid #000;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-align: center;
+}
+
+.PT-view > h2 > svg {
+	width: 20px;
+	height: 20px;
+	margin: 0px 5px;
+}
+
+.PT-view > h2 > svg > text{
+	width: 20px;
+	height: 20px;
+}
+
+.PT-paint {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 5px;
+	border: 2px solid #000;
+	background-color: #141414;
+	margin-left: 5px;
+	width: calc(18% + 0px);
+}
+
+.PT-paint > img {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	border: 2px solid #000;
+}
+
+.content__images.PT > .PT-B {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	border: 2px solid #000;
+	background-color: #141414;
+	padding: 5px;
+	margin-top: 5px;
+}
+
+.content__images.PT > .PT-B > img {
+	width: calc(100% / 10 - 5px);
+	border: 2px solid #000;
+}
